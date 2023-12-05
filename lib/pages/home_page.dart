@@ -54,6 +54,12 @@ class _HomePageState extends State<HomePage> {
         ),
         body: pages[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
+          onTap: (value) => {
+            setState(() {
+              currentIndex = value;
+            })
+          },
+          currentIndex: currentIndex,
           type: BottomNavigationBarType.fixed,
           items: const [
             BottomNavigationBarItem(
